@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка времени копчения камеры</title>
+</head>
+<body>
+    <button  value="15" onclick="handler(this)">молочные</button>
+    <button  value="15" onclick="handler(this)">венские</button>
+    <button  value="10" onclick="handler(this)">сливочные</button>
+    <br>
+    <br>
+    <button  value="35" onclick="handler(this)">сочные</button>
+    <button  value="30" onclick="handler(this)">сервелат</button>
+    <button  value="40" onclick="handler(this)">краковская</button>
+    <button  value="10" onclick="handler(this)">синюга</button>
+    <br>
+    
+    <br>
+    <button id="scip" name="scip" value="0" onclick="scip()">Обнуление</button>
+    
+
+    <br>
+
+
+
+
+    <script src="js/script.js"></script>
+    <script>
+        let sum = +0;
+        function handler(obj){
+            let a =+obj.value;
+           sum = sum + a;
+           if (sum > 200) {
+            alert("камеру нужно мыть время копчения " + sum);
+           } 
+           else 
+           alert(sum);
+        }
+        function scip(){
+            sum =0;
+        }
+        
+    </script>
+</body>
+
+</html>
